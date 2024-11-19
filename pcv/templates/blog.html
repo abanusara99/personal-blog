@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Personal Blog</h2>
+        
+        <!-- Blog Entry Form -->
+        <form action="{{ url_for('blog') }}" method="post">
+            <textarea name="content" rows="10" cols="50" placeholder="Write your blog here..." required></textarea><br><br>
+            <input type="submit" value="Submit" class="button">
+            <input type="reset" value="Clear" class="button"><br><br> <!-- Added breaks for spacing -->
+        </form>
+
+        <h3>Existing Blog Entries</h3>
+        <div class="entries>
+            {% for entry in entries %}
+                <div class="entry-card">
+                    <p>{{ entry[2] }}</p> <!-- Assuming content is at index 2 -->
+                    <form action="{{ url_for('delete', id=entry[0]) }}" method="post"> <!-- Assuming ID is at index 0 -->
+                        <a href="{{ url_for('edit', id=entry[0]) }}" class="button">Edit</a>
+                        <input type="submit" value="Delete" class="button">
+                    </form>
+                </div>
+                <br> <!-- Added break between each entry card -->
+            {% endfor %}
+        </div>
+
+        <!-- Logout Option -->
+        <form action="{{ url_for('logout') }}" method="post"> <!-- Assuming you have a logout route -->
+            <input type="submit" value="Logout" class="button"><br><br> <!-- Added break for spacing -->
+        </form>
+    </div>
+</body>
+</html>

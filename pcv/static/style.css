@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    background: linear-gradient(to right, #00008B, #FF69B4); /* Blue to pink gradient */
+}
+
+.container {
+    text-align: center; /* Center align text within the container */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent white background */
+    padding: 20px; /* Optional: Add padding for spacing inside the container */
+    border-radius: 10px; /* Optional: Rounded corners for a softer look */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+}
+
+h1 {
+    color: white; /* White text for contrast */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center align buttons horizontally */
+}
+
+.button {
+    display: inline-block; /* Make links behave like buttons */
+    padding: 15px 30px; /* Padding for button size */
+    margin: 10px; /* Space between buttons */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for buttons */
+    color: #00008B; /* Dark blue text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+}

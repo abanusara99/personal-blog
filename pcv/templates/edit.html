@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Edit Blog Entry</h2>
+
+    <form action="{{ url_for('edit', id=entry[0]) }}" method="post"> <!-- Assuming ID is at index 0 -->
+        <textarea name="content" rows="10" cols="50">{{ entry[2] }}</textarea><br> <!-- Assuming content is at index 2 -->
+        <input type="submit" value="Update">
+        <input type="reset" value="Clear">
+    </form>
+
+    <!-- Logout Option -->
+    <form action="{{ url_for('logout') }}" method="post"> <!-- Assuming you have a logout route -->
+        <input type="submit" value="Logout">
+    </form>
+
+</body>
+</html>

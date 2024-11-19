@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    background: linear-gradient(to right, #00008B, #FF69B4); /* Blue to pink gradient */
+}
+
+form {
+    background-color: rgb(0, 0, 0); /* Slightly transparent white background for contrast */
+    color:white;
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    width: 300px; /* Fixed width for the form */
+    text-align: center; /* Center align text within the form */
+}
+
+h2 {
+    color: #fcfcff; /* Dark blue color for the heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+input[type=email], input[type=password] {
+    width: 90%; /* Full width inputs */
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+input[type=submit] {
+    display: block; /* Change display to block */
+    width: 100%; /* Full width for submit button */
+    padding: 10px;
+    background-color: #04AA6D; /* Green background for submit button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above submit button */
+}
+
+input[type=submit]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+p {
+    margin-top: 15px; /* Space above paragraph */
+}
+
+a {
+    color: #daf97d; /* Dark blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
